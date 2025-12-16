@@ -6,6 +6,8 @@ entity Product {
   + string category
   + int price
   + list<Remain> remains
+  + string colour
+  + int size
 }
 
 entity Remain {
