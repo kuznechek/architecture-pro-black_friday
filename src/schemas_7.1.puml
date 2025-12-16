@@ -1,0 +1,27 @@
+@startuml
+
+entity User {
+  + string id
+  + string name
+}
+
+entity Order {
+  + string id
+  + string user_id
+  + date date_order
+  + list<Product> products
+  + string status
+  + float cost
+  + string geo_zone
+}
+
+entity Product {
+  + string id
+  + int count
+  + int price
+}
+
+Order "0.." -- "1" User : belongs_to
+Order "1" -- "0..*" Product : contains
+
+@enduml
