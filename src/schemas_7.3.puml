@@ -1,0 +1,21 @@
+@startuml
+
+entity Cart {
+  + int id
+  + string user_id
+  + string session_id
+  + list<Item> items
+  + string status
+  + date created_at
+  + date updated_at
+  + date expires_at
+}
+
+entity Item {
+  + int id
+  + int quantity
+}
+
+Cart "1" -- "0..*" Item : contains
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+
+entity Product {
+  + string id
+  + string name
+  + string category
+  + int price
+  + list<Remain> remains
+  + string colour
+  + int size
+}
+
+entity Remain {
+  + string geo_zone
+  + intquantity
+}
+
+Product "1" -- "0..*" Remain : has
+
+@enduml
